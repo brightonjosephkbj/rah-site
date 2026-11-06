@@ -1,0 +1,20 @@
+:root{--rose:#EAC5C8;--cherry:#431D2D;--light:#FFC46B;--out:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--rose);color:var(--cherry);font:18px/1.65 "Avenir Next","Segoe UI",system-ui,sans-serif}
+main,footer{max-width:720px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--cherry);outline-offset:3px}
+.hero{padding-top:64px;padding-bottom:36px}
+.hero>*{animation:in .22s var(--out) both}
+.hero>:nth-child(2){animation-delay:30ms}.hero>:nth-child(3){animation-delay:60ms}.hero>:nth-child(4){animation-delay:90ms}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.tag{font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 12px;opacity:.75}
+h1{font:400 clamp(56px,16vw,104px)/.95 Georgia,"Times New Roman",serif;letter-spacing:-.03em;margin:0 0 18px}
+.lead{max-width:30ch;font-size:21px;margin:0 0 26px}
+.btn{display:inline-block;background:var(--light);color:var(--cherry);text-decoration:none;font-weight:700;padding:14px 28px;border-radius:999px;transition:transform .15s var(--out)}
+.btn:active{transform:scale(.97)}
+h2{font:400 28px Georgia,serif;margin:44px 0 10px}
+ul{list-style:none;margin:0;padding:0}
+li{border-top:1px solid rgba(67,29,45,.25);padding:12px 0}
+footer{padding-top:48px;padding-bottom:56px;font-size:15px;opacity:.8}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
